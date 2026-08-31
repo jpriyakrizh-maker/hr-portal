@@ -1,0 +1,355 @@
+/* About Intro Section */
+.about-intro-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Image Card */
+.about-image-column {
+  position: relative;
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(30, 58, 138, 0.2);
+  border: 4px solid #ffffff;
+}
+
+.about-main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  color: #ffffff;
+  padding: 18px 24px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.exp-num {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Right Content */
+.about-paragraph {
+  font-size: 1.08rem;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-paragraph.secondary {
+  color: #64748b;
+  font-size: 0.98rem;
+  margin-bottom: 28px;
+}
+
+.about-feature-bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e3a8a;
+}
+
+.bullet-check {
+  width: 26px;
+  height: 26px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.about-cta-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+/* Section 2: Statistics Section */
+.about-stats-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+  color: #ffffff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-card {
+  padding: 24px 16px;
+  position: relative;
+}
+
+.stat-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 60%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-value {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #38bdf8;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.stat-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+/* Section 3: Mission and Vision Cards */
+.mission-vision-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.mv-card {
+  background: #ffffff;
+  padding: 44px 36px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -5px rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.mv-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover .mv-icon-badge {
+  transform: scale(1.1) rotate(5deg);
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.vision-badge {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.mv-card:hover .vision-badge {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.mv-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+.mv-text {
+  font-size: 0.98rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.mv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mv-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.mv-check {
+  color: #2563eb;
+  font-size: 0.85rem;
+}
+
+/* Core Values */
+.core-values-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.value-item {
+  background: #f8fafc;
+  padding: 32px 24px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.1);
+}
+
+.value-icon {
+  width: 52px;
+  height: 52px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 14px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.value-item h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+.value-item p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card:nth-child(2)::after {
+    display: none;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-feature-bullets {
+    grid-template-columns: 1fr;
+  }
+
+  .about-main-image {
+    height: 380px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card::after {
+    display: none !important;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

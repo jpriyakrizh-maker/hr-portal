@@ -1,0 +1,13 @@
+.split-text-container {
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+.split-word {
+  display: inline-block;
+}
+
+.split-char {
+  display: inline-block;
+  backface-visibility: hidden;
+}
