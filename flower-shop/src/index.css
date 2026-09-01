@@ -1,0 +1,344 @@
+/* ==========================================================================
+   BLOOMÉ LUXURY DESIGN SYSTEM & GLOBAL STYLES
+   ========================================================================== */
+
+:root {
+  /* Core Luxury Dark Palette */
+  --bg-main: #171414;
+  --bg-deep: #211A1A;
+  --bg-surface: #2A2323;
+  --bg-surface-elevated: #352B2B;
+  --bg-glass: rgba(33, 26, 26, 0.75);
+  --bg-glass-card: rgba(42, 35, 35, 0.65);
+  --bg-glass-input: rgba(23, 20, 20, 0.6);
+
+  /* Typography & Accent Palette */
+  --text-primary: #E8D8C8;       /* Warm Beige */
+  --text-secondary: #D4C3B3;     /* Muted Warm Beige */
+  --text-muted: #9E8E81;         /* Subtle Dusty Beige */
+  --text-dark: #171414;          /* For light button text */
+
+  --color-rose: #B9828D;         /* Soft Rose */
+  --color-rose-light: #C99AA2;   /* Dusty Pink */
+  --color-rose-glow: rgba(185, 130, 141, 0.25);
+  --color-gold: #B89B6A;         /* Muted Gold */
+  --color-gold-light: #D4BA88;   /* Light Muted Gold */
+  --color-sage: #8F9A82;         /* Soft Sage */
+
+  /* Borders & Shadows */
+  --border-subtle: rgba(232, 216, 200, 0.12);
+  --border-gold: rgba(184, 155, 106, 0.35);
+  --border-rose: rgba(185, 130, 141, 0.4);
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-rose: 0 10px 30px rgba(185, 130, 141, 0.15);
+  --shadow-gold: 0 10px 30px rgba(184, 155, 106, 0.15);
+
+  /* Typography Fonts */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-serif-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Manrope', 'Montserrat', sans-serif;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-slow: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.65;
+  font-size: 15px;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(33, 26, 26, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(42, 35, 35, 0.5) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-rose);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-elevated);
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif-heading);
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+/* Section Common Layout */
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+/* Star Separator & Decorative Lines */
+.star-symbol {
+  color: var(--color-gold);
+  display: inline-block;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  user-select: none;
+  filter: drop-shadow(0 0 8px rgba(184, 155, 106, 0.4));
+}
+
+.star-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  color: var(--color-gold);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.star-divider::before,
+.star-divider::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+}
+
+/* Editorial Button Styles */
+.btn-bloome {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 2.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: rgba(33, 26, 26, 0.6);
+  border: 1px solid var(--border-rose);
+  border-radius: var(--radius-full);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: var(--transition-smooth);
+}
+
+.btn-bloome::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-rose) 0%, var(--color-rose-light) 100%);
+  opacity: 0;
+  transition: var(--transition-smooth);
+  z-index: 0;
+}
+
+.btn-bloome span {
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-smooth);
+}
+
+.btn-bloome:hover {
+  border-color: var(--color-rose-light);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(185, 130, 141, 0.3);
+  color: #ffffff;
+}
+
+.btn-bloome:hover::before {
+  opacity: 1;
+}
+
+.btn-bloome-gold {
+  border-color: var(--border-gold);
+  color: var(--text-primary);
+}
+
+.btn-bloome-gold::before {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+}
+
+.btn-bloome-gold:hover {
+  border-color: var(--color-gold-light);
+  color: #171414;
+  box-shadow: 0 10px 25px rgba(184, 155, 106, 0.35);
+}
+
+/* Secondary Ghost Button */
+.btn-bloome-ghost {
+  border-color: var(--border-subtle);
+  background: transparent;
+}
+.btn-bloome-ghost:hover {
+  background: var(--bg-surface);
+  border-color: var(--color-rose);
+  color: var(--color-rose-light);
+}
+
+/* Badge Styling */
+.luxury-tag {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: rgba(185, 130, 141, 0.15);
+  color: var(--color-rose-light);
+  border: 1px solid rgba(185, 130, 141, 0.3);
+}
+
+/* Floating Floral Background Dots / Glow */
+.ambient-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+.glow-rose {
+  background: radial-gradient(circle, var(--color-rose) 0%, transparent 70%);
+}
+
+.glow-gold {
+  background: radial-gradient(circle, var(--color-gold) 0%, transparent 70%);
+}
+
+.glow-sage {
+  background: radial-gradient(circle, var(--color-sage) 0%, transparent 70%);
+}
+
+/* 3D Flip Text Animation Helpers */
+.flip-text-container {
+  display: inline-block;
+  perspective: 1000px;
+  height: 1.25em;
+  vertical-align: bottom;
+  position: relative;
+  overflow: visible;
+}
+
+.flip-text-item {
+  display: inline-block;
+  color: var(--color-rose-light);
+  font-family: var(--font-serif-heading);
+  font-style: italic;
+  transform-origin: center bottom;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s ease;
+  white-space: nowrap;
+}
+
+.flip-text-item.flip-enter {
+  opacity: 0;
+  transform: rotateX(90deg) translateY(20px);
+}
+
+.flip-text-item.flip-active {
+  opacity: 1;
+  transform: rotateX(0deg) translateY(0);
+}
+
+.flip-text-item.flip-exit {
+  opacity: 0;
+  transform: rotateX(-90deg) translateY(-20px);
+}

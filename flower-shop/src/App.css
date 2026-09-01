@@ -1,0 +1,16 @@
+/* ==========================================================================
+   APP LAYOUT STYLES
+   ========================================================================== */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg-main);
+}
+
+.main-content {
+  flex: 1 0 auto;
+  position: relative;
+}
