@@ -1,0 +1,220 @@
+.employee-table-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e8edf4;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(20, 35, 60, 0.05);
+}
+
+/* Header */
+
+.table-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.table-header h3 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.table-header p {
+  margin: 0;
+  color: #8993a5;
+  font-size: 12px;
+}
+
+.view-all-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #dce5ef;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #3478c9;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.view-all-button:hover {
+  background: #f4f8fd;
+}
+
+/* Table */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.employee-table thead tr {
+  background: #f7f9fc;
+}
+
+.employee-table th {
+  padding: 13px 14px;
+
+  color: #7d8798;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  border-bottom: 1px solid #e9edf3;
+}
+
+.employee-table td {
+  padding: 15px 14px;
+
+  color: #596579;
+  font-size: 12px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.employee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+/* Employee */
+
+.employee-info {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.employee-avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eaf3ff;
+  color: #3478c9;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.employee-info strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #202b3f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.employee-info span {
+  display: block;
+
+  color: #9aa3b1;
+  font-size: 10px;
+}
+
+/* Status */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #eaf8f1;
+  color: #299565;
+}
+
+.status-badge.on-leave {
+  background: #fff6df;
+  color: #c58a1c;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Action */
+
+.table-action {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #8993a5;
+}
+
+.table-action:hover {
+  background: #f1f4f8;
+  color: #3478c9;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .employee-table-card {
+    padding: 18px;
+  }
+
+  .table-header {
+    align-items: flex-start;
+  }
+
+  .table-header h3 {
+    font-size: 15px;
+  }
+
+  .table-header p {
+    font-size: 10px;
+  }
+
+  .view-all-button {
+    padding: 8px 10px;
+  }
+}

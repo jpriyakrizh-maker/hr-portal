@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.projects-page {
+  min-height: calc(100vh - 76px);
+  padding: 90px 7%;
+  background: #07101f;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background glow */
+.projects-page::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #38bdf8;
+  border-radius: 50%;
+  opacity: 0.06;
+  filter: blur(120px);
+  top: -250px;
+  right: -150px;
+}
+
+.projects-page::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(38, 22, 67, 0.95);
+
+  border-radius: 50%;
+  opacity: 0.04;
+  filter: blur(120px);
+  bottom: -220px;
+  left: -150px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.projects-heading {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-label {
+  color:white;
+  font-size: 11px;
+  font-weight:1000;
+  letter-spacing: 4px;
+  margin: 0 0 15px;
+}
+
+.projects-heading h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(45px, 6vw, 68px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  color: #ffffff;
+}
+
+.projects-heading h1 span {
+  color:     rgba(38, 22, 67, 0.95);
+
+}
+
+.projects-intro {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #9ba8bb;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.projects-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+  background: rgba(7, 16, 31, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+  height: 210px;
+  background: #38bdf8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Decorative shapes */
+.project-image::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.project-image span {
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #07101f;
+}
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content {
+  padding: 30px;
+}
+
+.project-content h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.project-content p {
+  color: #9ba8bb;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+  min-height: 70px;
+}
+
+/* =========================
+   TECH TAGS
+========================= */
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 25px;
+}
+
+.tech-tags span {
+  padding: 7px 12px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 50px;
+  background: rgba(56, 189, 248, 0.08);
+  color:white;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.project-buttons a {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+/* Live button */
+.live-button {
+  background: rgba(38, 22, 67, 0.95);
+;
+  color:white;
+  border: 1px solid #38bdf8;
+}
+
+.live-button:hover {
+  background: transparent;
+  color: #38bdf8 !important;
+  transform: translateY(-2px);
+}
+
+/* GitHub button */
+.github-button {
+  background: transparent;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.github-button:hover {
+  border-color: #38bdf8;
+  color: #38bdf8 !important;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .projects-page {
+    padding: 75px 6%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .projects-page {
+    padding: 55px 5%;
+  }
+
+  .projects-heading {
+    margin-bottom: 45px;
+  }
+
+  .projects-heading h1 {
+    font-size: 44px;
+  }
+
+  .projects-intro {
+    font-size: 13px;
+  }
+
+  .project-image {
+    height: 170px;
+  }
+
+  .project-content {
+    padding: 23px;
+  }
+
+  .project-content h2 {
+    font-size: 27px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+}

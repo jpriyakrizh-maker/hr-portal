@@ -1,0 +1,38 @@
+.footer {
+  background: #07101f;
+  color: #aeb6c5;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  color: white;
+  font-family: "DM Serif Display", serif;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #d9dce5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: #b36cff;
+}
+
+.footer small {
+  color: #737b8c;
+}
